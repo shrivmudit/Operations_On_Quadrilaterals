@@ -36,4 +36,12 @@ public class RectangleTesting {
         int actualoutcome = Rectangle.perimeter();
         assertEquals(expectedoutcome, actualoutcome);
     }
+    @DisplayName("Perimeter with one negative")
+    @Test
+    void ToCalculateThePerimeterWhenOLastValueIsNegative() {
+        MethodForQuadrilaterals Rectangle = new MethodForQuadrilaterals(2, -6);
+        int expectedoutcome = -8;
+        int actualoutcome = Rectangle.perimeter();
+        assertEquals(expectedoutcome, actualoutcome);
+    }
 }
