@@ -1,26 +1,27 @@
 public class MethodForQuadrilaterals {
 
-    int Line1angle90, Line2angle90;
+    int Length, Breath;
 
-    public MethodForQuadrilaterals(int Line1angle90, int Line2angle90) {
-        this.Line1angle90 = Line1angle90;
-        this.Line2angle90 = Line2angle90;
+    public MethodForQuadrilaterals(int Length, int Breath) {
+        this.Length = Length;
+        this.Breath = Breath;
     }
 
 
     public int area() {
-        return Line1angle90 * Line2angle90;
+        if(Length==Breath)
+        return Length * Length;
+        else
+            return Length * Breath;
     }
 
     public int perimeter() {
-        return 2 * (Line1angle90 + Line2angle90);
+        if(Length==Breath)
+            return 4*Length;
+        else
+            return 2*(Length+Breath);
+    }
 
-    }
-    public int perimetersquare() {
-        return 4*Line1angle90;
-    }
 
-    public int areasqaure() {
-        return Line1angle90*Line2angle90;
-    }
+
 }
